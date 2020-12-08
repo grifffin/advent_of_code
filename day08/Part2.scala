@@ -18,7 +18,7 @@ object Part2 {
         val nextAcc = if(line(0) == "acc") acc + line(1).toInt else acc
         val next = checkLine(nextLine, nextAcc, madeChange)
         if(next == 0) {
-          visited.remove(lineNum)
+          visited -= lineNum
           return 0
         } else return next
       } else {
@@ -27,7 +27,7 @@ object Part2 {
         if(next1 != 0) return next1
         else if(next2 != 0) return next2
         else {
-          visited.remove(lineNum)
+          visited -= lineNum
           return 0
         }
       }
