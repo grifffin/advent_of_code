@@ -7,7 +7,7 @@ object Part2 {
     val file = Source.fromFile(filename).getLines().toList
     var visited = new HashSet[Int]
 
-    // why yes, this does break if the answer is 0
+    // if the initial call returns 0, either the input is screwed up or the answer actually is 0
     def checkLine(lineNum: Int, acc: Int, madeChange: Boolean): Int = {
       if(lineNum == file.length) return acc
       if(visited.contains(lineNum)) return 0
