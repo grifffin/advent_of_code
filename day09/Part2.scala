@@ -5,6 +5,8 @@ object Part2 {
   def main(args: Array[String]): Unit = {
     val filename = "input"
     val file = Source.fromFile(filename).getLines().toList
+    // this is the number for my input from part one
+    // todo, call part one instead of use this number
     val magicNumber = 1930745883
     var i = 0
     var nums = new Queue[Long]
